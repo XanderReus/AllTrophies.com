@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Configuration files
+src/config.js
+
 # production
 /build
 
