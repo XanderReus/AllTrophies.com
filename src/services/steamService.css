@@ -5,7 +5,9 @@ body {
 }
 ul{
 display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    flex-direction: initial;
+    justify-content: space-evenly;
 }
 h1 {
     color: navy;
