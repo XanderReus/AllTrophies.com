@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'AquireLight';
+    src: url('../fonts/AquireLight-YzE0o.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    background-image: url("img/ACH background.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+
+}
+
+.header {
+    background-color: #333;
+    padding: 20px 0;
+    height: 70px;
+    color: #fff;
+}
+
+.navbar {
+    font-family: 'AquireLight';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    max-height: 100px;
+    margin-left: 74%;
+    padding: 0 20px;
+    height: 25px;
+
+    /*position: fixed;*/
+}
+
+.nav-links {
+    list-style: none;
+    /*position: fixed;*/
+    right: 0;
+
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-section {
+    font-family: "Cascadia Code";
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.cardmain {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cardach {
+    font-family: 'AquireLight';
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.cardach:hover {
+    transform: translateY(-10px);
+}
+
+.cardach img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+
+.footer {
+    font-family: "AquireLight";
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 235px;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 55px;
+    max-height: 55px;
+    /*height: 521px;*/
+    /*width: 800px;*/
+    /*margin-left: -125px;*/
+    /*position: relative;*/
+    /*top: 5px;*/
+    /*left: 50px;*/
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}

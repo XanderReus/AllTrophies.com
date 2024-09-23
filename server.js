@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Example route to serve the React app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'build', 'App.html'));
 });
 
 // Start the server

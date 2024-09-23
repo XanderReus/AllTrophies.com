@@ -5,9 +5,10 @@ body {
 }
 ul{
 display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     flex-direction: initial;
     justify-content: space-evenly;
+    align-items: center;
 }
 h1 {
     color: navy;

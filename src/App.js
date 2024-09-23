@@ -1,17 +1,26 @@
+// src/App.js
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
+import SteamComponents from './components/SteamComponents';
+import MyApp from "./HTML/HP";
+import Steam from './HTML/steam';
+import PlayStation from './HTML/ps';
+import Xbox from './HTML/xbox';
 
-const App = () => {
-  return (
-      <div>
-        <h1>Welcome to My Steam App</h1>
-        <nav>
-          <ul>
-            <li><Link to="/steam-services">Steam Services</Link></li>
-          </ul>
-        </nav>
-      </div>
-  );
-};
+function App() {
+    return (
+        <Router>
+            <>
+                <Routes>
+                    <Route exact path="/" element={<MyApp />} />
+                    <Route path="/steam" element={<Steam />} />
+                    <Route path="/playstation" element={<PlayStation />} />
+                    <Route path="/xbox" element={<Xbox />} />
+                </Routes>
+            </>
+        </Router>
+    );
+}
+
 
 export default App;
