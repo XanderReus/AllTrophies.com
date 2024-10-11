@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom/client'; // Update this import
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import button from "react-bootstrap/button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement); // Use createRoot

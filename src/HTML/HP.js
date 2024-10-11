@@ -6,8 +6,8 @@ export default function MyApp() {
     return (
         <div>
             <header className="header">
+                <img src={logo} className="logo" alt="Logo" style={{}}/>
                 <nav className="navbar">
-                    <img src={logo} className="logo" alt="Logo" style={{}}/>
                     <ul className="nav-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">All ACH</a></li>

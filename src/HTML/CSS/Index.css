@@ -10,8 +10,8 @@
 }
 
 body {
-    color: #333;
-    background-image: url("img/ACH background.jpg");
+    /*color: #333;*/
+    /*background-image: url("img/ACH background almost done.gif");*/
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center top;
@@ -19,11 +19,116 @@ body {
 
 }
 
+/*test for animation*/
+/* Style for the body class which includes the background and animations */
+body.animation {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('img/bg/ACH background.png'); /* Add the ACH background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: visible; /* Allow overflow to show circle and square */
+    z-index: 0; /* Background should stay behind */
+}
+
+/* Circle object */
+body.animation::before {
+    content: '';
+    position: fixed;
+    top: 20%; /* Adjusted position */
+    left: 35%;
+    width: 1600px;
+    height: 1600px;
+    background-image: url('img/bg/ACH background cir.png'); /* Circle image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDown 5s ease-in-out infinite;
+    z-index: -1; /* Ensure circle appears above the background */
+}
+
+/* Square object */
+body.animation::after {
+    content: '';
+    position: fixed;
+    top: 6%; /* Adjusted position */
+    right: 34%;
+    width: 1600px;
+    height: 1600px;
+    background-image: url('img/bg/ACH background squar.png'); /* Square image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDown 7s ease-in-out infinite;
+    z-index: -1; /* Ensure square appears above the background */
+}
+
+/* Triangle */
+.triangle {
+    position: fixed;
+    top: 6%; /* Adjusted position */
+    left: 33.5%;
+    width: 1600px;
+    height: 1600px;
+    background-image: url('img/bg/ACH background tria.png'); /* Triangle image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDownTriangle 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* X Shape */
+.x-shape {
+    position: fixed;
+    top: 20%; /* Adjusted position */
+    left: 0%;
+    width: 1600px;
+    height: 1600px;
+    background-image: url('img/bg/ACH background x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDownX 8s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Keyframes for smooth up and down movement */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes moveUpDownTriangle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Slightly more movement for the triangle */
+    }
+}
+
+@keyframes moveUpDownX {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Slightly more movement for the triangle */
+    }
+}
+/*test animation end*/
+
 .header {
     background-color: #333;
     padding: 20px 0;
     height: 70px;
     color: #fff;
+    position: sticky;
+    top: 0%;
+    z-index: 1;
 }
 
 .navbar {
@@ -42,8 +147,9 @@ body {
 
 .nav-links {
     list-style: none;
-    /*position: fixed;*/
+    position: fixed;
     right: 0;
+    top: 22px;
 
 }
 
@@ -124,6 +230,6 @@ body {
     /*left: 50px;*/
     position: absolute;
     top: 8px;
-    left: 16px;
+    left: 45px;
     font-size: 18px;
 }

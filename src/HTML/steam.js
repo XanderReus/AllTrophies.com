@@ -14,10 +14,10 @@ const steam = () => {
         <div>
             {/*Navbar*/}
             <header className="header">
+                <Link to="./HP.js">
+                    <button onClick="myFunction()"><img src={logo} className="logo" alt="Logo" style={{}}/></button>
+                </Link>
                 <nav className="navbar">
-                    <Link to="./HP.js">
-                        <button onClick="myFunction()"><img src={logo} className="logo" alt="Logo" style={{}}/></button>
-                    </Link>
                     <ul className="nav-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">All ACH</a></li>
