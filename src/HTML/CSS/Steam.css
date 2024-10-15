@@ -1,100 +1,92 @@
-@font-face {
-    font-family: 'AquireLight';
-    src: url('../fonts/AquireLight-YzE0o.otf');
+body::-webkit-scrollbar {
+    display: none;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
+.searchs {
+    display: flex;
+    width: 20%;
+    height: 10%;
+    margin-left: 40%;
+    margin-top: 5%;
+    flex-direction: row;
 }
 
 /* Animation styles */
-body.animation {
+.steamcss body.animation {
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url('img/bg/ACH background.png'); /* ACH background image */
+    background-image: url('img/bg/st bg 1.jpg'); /* ACH background image */
     background-size: cover;
     background-position: center;
     position: fixed;
     overflow: visible; /* Allow overflow to show circle and square */
-    z-index: -1; /* Background stays behind */
+    z-index: -2; /* Background stays behind */
 }
 
-.animation-container {
+.animation-containerst {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    /*overflow: hidden;*/
 }
 
-.animation-background {
+.animation-backgroundst {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url('img/bg/ACH background2.png');
+    background-image: url('img/bg/st bg 1.jpg');
     background-size: cover;
     background-position: center;
     z-index: -2;
 }
 
 /* Triangle */
-.triangle {
+.btny {
     position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background tria.png'); /* Triangle image */
+    top: 8vh; /* Adjusted position */
+    right: -19vw;
+    width: 35vw;
+    height: 35vh;
+    background-image: url('img/bg/st black y.png'); /* Triangle image */
     background-size: contain;
     background-repeat: no-repeat;
-    animation: moveUpDownTriangle 6s ease-in-out infinite;
+    animation: moveUpDownX 6s ease-in-out infinite;
     z-index: -1;
 }
 
 /* X Shape */
-.x-shape {
+.btnx {
     position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
+    top: 8vh; /* Adjusted position */
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background x.png');
+    width: 35vw;
+    height: 35vh;
+    background-image: url('img/bg/st black x.png');
     background-size: contain;
     background-repeat: no-repeat;
     animation: moveUpDownX 8s ease-in-out infinite;
     z-index: -1;
 }
 
-.Circle {
+.btna {
     position: fixed; /* Changed from absolute to fixed */
-    bottom: -8vh; /* Adjusted position */
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background cir.png'); /* Triangle image */
+    bottom: 1vh; /* Adjusted position */
+    right: 65vw;
+    width: 35vw;
+    height: 35vh;
+    background-image: url('img/bg/st black a.png'); /* Triangle image */
     background-size: contain;
     background-repeat: no-repeat;
     animation: moveUpDownTriangle 6s ease-in-out infinite;
     z-index: -1;
 }
 
-.Square {
+.btnb {
     position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background squar.png'); /* Triangle image */
+    top: 65vh; /* Adjusted position */
+    left: 85vw;
+    width: 35vw;
+    height: 35vh;
+    background-image: url('img/bg/st black b.png'); /* Triangle image */
     background-size: contain;
     background-repeat: no-repeat;
     animation: moveUpDownTriangle 6s ease-in-out infinite;
@@ -129,19 +121,20 @@ body.animation {
     }
 }
 
+
 /* Header */
-.header {
+.headerst {
     background-color: #333;
     padding: 20px 0;
     height: 70px;
     color: #fff;
     position: sticky;
-    top: 0%;
+    top: 0;
     z-index: 1;
 }
 
 /* Navbar */
-.navbar {
+.navbarst {
     font-family: 'AquireLight';
     display: flex;
     justify-content: space-between;
@@ -151,66 +144,28 @@ body.animation {
     margin-left: 74%;
     padding: 0 20px;
     height: 25px;
+    z-index: 1;
 }
 
 /* Navigation Links */
-.nav-links {
+.nav-linksst {
     list-style: none;
     position: fixed;
     right: 0;
     top: 22px;
+    z-index: 1;
 }
 
-.nav-links li {
+.nav-linksst li {
     margin: 0 15px;
+    z-index: 1;
 }
 
-.nav-links a {
+.nav-linksst a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-}
-
-/* Main Content */
-.main-content {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.hero-section {
-    font-family: "Cascadia Code";
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.cardmain {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cardach {
-    font-family: 'AquireLight';
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 350px;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-}
-
-.cardach:hover {
-    transform: translateY(-10px);
-}
-
-.cardach img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+    z-index: 1;
 }
 
 /* Footer */
@@ -235,4 +190,23 @@ body.animation {
     top: 8px;
     left: 45px;
     font-size: 18px;
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'AquireLight';
+    src: url('../fonts/AquireLight-YzE0o.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
 }

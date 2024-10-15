@@ -1,35 +1,34 @@
 // src/App.js
-import React, {useEffect} from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
-import SteamComponents from './components/SteamComponents';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MyApp from "./HTML/HP";
 import Steam from './HTML/steam';
 import PlayStation from './HTML/ps';
 import Xbox from './HTML/xbox';
 import './index.css';
+import "./HTML/CSS/Index.css";
 
 function App() {
-    useEffect(() => {
-        document.body.classList.add('animation'); // Add the animation class when the component mounts
-        <div className="triangle"></div>
-    }, []);
-
-
     return (
         <Router>
-            <>
-                <div className="triangle"></div>
-                <div className="x-shape"></div>
-                <Routes>
-                    <Route exact path="/" element={<MyApp/>}/>
-                    <Route path="/steam" element={<Steam/>}/>
-                    <Route path="/playstation" element={<PlayStation/>}/>
-                    <Route path="/xbox" element={<Xbox/>}/>
-                </Routes>
-            </>
+            <div className="animation-container">
+                <div className="animation-background">
+                    <div className="Circle"></div>
+                    <div className="Square"></div>
+                    <div className="triangle"></div>
+                    <div className="x-shape"></div>
+                </div>
+                <div className="content">
+                    <Routes>
+                        <Route exact path="/" element={<MyApp />} />
+                        <Route path="/steam" element={<Steam />} />
+                        <Route path="/ps" element={<PlayStation />} />
+                        <Route path="/xbox" element={<Xbox />} />
+                    </Routes>
+                </div>
+            </div>
         </Router>
     );
 }
-
 
 export default App;
