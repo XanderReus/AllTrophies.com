@@ -5,6 +5,7 @@ import SteamComponents from './components/SteamComponents';
 import MyApp from "./HTML/HP";
 import Steam from './HTML/steam';
 import PlayStation from './HTML/ps';
+import GamesList from './components/PSNComponents'; // Adjust the path as necessary
 import Xbox from './HTML/xbox';
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<MyApp />} />
                     <Route path="/steam" element={<Steam />} />
-                    <Route path="/playstation" element={<PlayStation />} />
+                    <Route path="/ps" element={<GamesList />} />
                     <Route path="/xbox" element={<Xbox />} />
                 </Routes>
             </>

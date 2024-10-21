@@ -21,7 +21,7 @@ async function main() {
 // 2. Get the user's `accountId` from the username.
     const allAccountsSearchResults = await makeUniversalSearch(
         authorization,
-        "eyad-yeager",
+        "rob915ert",
         "SocialAllAccounts"
     );
 
