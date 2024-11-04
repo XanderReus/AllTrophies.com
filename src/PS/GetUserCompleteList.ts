@@ -125,8 +125,8 @@ const normalizeTrophy = (trophy: Trophy) => {
 const rarityMap: Record<TrophyRarity, string> = {
     [TrophyRarity.VeryRare]: "Very Rare",
     [TrophyRarity.UltraRare]: "Ultra Rare",
-    [TrophyRarity.Rare]: "Rare",
+    [TrophyRarity.Rare]: "Rare" ,
     [TrophyRarity.Common]: "Common"
 };
 
-main();
+export default main();
