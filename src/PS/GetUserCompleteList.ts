@@ -1,3 +1,4 @@
+//GetUserCompleteList.ts
 import * as  fs from "fs";
 
 import type {Trophy} from "psn-api";
@@ -80,7 +81,8 @@ async function main() {
                 platform: title.trophyTitlePlatform,
                 trophyTypeCounts: title.definedTrophies,
                 earnedCounts: title.earnedTrophies,
-                trophyList: mergedTrophies
+                trophyList: mergedTrophies,
+                gameURL: title.trophyTitleIconUrl
             });
         } catch (error) {
             console.error(`Failed to fetch trophies for ${title.trophyTitleName}:`, error.message);
