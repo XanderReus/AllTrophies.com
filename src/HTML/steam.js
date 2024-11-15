@@ -1,29 +1,32 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
 import SteamComponents from '../components/SteamComponents';
 import logo from "./CSS/img/ACHlogo.png";
-import "./CSS/Steam.css"
+import "./CSS/Steam.css";
 
+const Steam = () => {
+    const [steamId, setSteamId] = useState(''); // Default SteamID64
+    const [searchInput, setSearchInput] = useState(''); // State to store user input
 
-const steam = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [steamId, setSteamId] = useState('76561198239999462'); // State for steamId, which is used in SteamComponents
+    // Handle the form submission
+    const handleSearchSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission
+        setSteamId(searchInput); // Update the steamId with user input
+        console.log("Searching for Steam User 64: ", searchInput); // Debug log
+    };
 
     return (
         <div className="steamcss">
             <div className="animation-containerst">
-                <div className="animation-backgroundst">
-                    <div className="btny"></div>
-                    <div className="btnx"></div>
-                    <div className="btna"></div>
-                    <div className="btnb"></div>
-                </div>
+                <div className="animation-backgroundst"></div>
             </div>
             <div>
-                {/*Navbar*/}
+                {/* Navbar */}
                 <header className="headerst">
                     <Link to="/">
-                        <button><img src={logo} className="logo" alt="Logo" style={{}}/></button>
+                        <button>
+                            <img src={logo} className="logo" alt="Logo" />
+                        </button>
                     </Link>
                     <nav className="navbarst">
                         <ul className="nav-linksst">
@@ -35,26 +38,35 @@ const steam = () => {
                     </nav>
                 </header>
 
-                <searchS className="searchs">
-                    <input id="search-input-field" type="text" className="form-control" placeholder="Name"
-                           aria-label="Name" aria-describedby="button-addon2"/>
-                    <button className="btn btn-secondary custom-btn" type="submit" id="button-addon2">Search</button>
-                </searchS>
+                {/* Search Bar */}
+                <form className="searchs" onSubmit={handleSearchSubmit}>
+                    <input
+                        id="search-input-field"
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Steam User 64"
+                        aria-label="Steam User 64"
+                        aria-describedby="button-addon2"
+                        value={searchInput} // Bind to searchInput state
+                        onChange={(e) => setSearchInput(e.target.value)} // Update searchInput state on change
+                    />
+                    <button className="btn btn-secondary custom-btn" type="submit" id="button-addon2">
+                        Search
+                    </button>
+                </form>
 
-
-                {/* Render SteamComponents directly */}
+                {/* Render SteamComponents with updated steamId */}
                 <testS className="testS">
-                    <SteamComponents steamid={steamId} setSteamId={setSteamId}/>
+                    <SteamComponents steamid={steamId} setSteamId={setSteamId} />
                 </testS>
 
-
-                {/*footer*/}
+                {/* Footer */}
                 <footer className="footer">
-                    <p>&copy; 2024 ACH Database. All rights reserved.</p>
+                    <p>&copy; 2024 ACH Database. All rights reserved. CaveMen inc.</p>
                 </footer>
-
             </div>
         </div>
     );
-}
-export default steam;
+};
+
+export default Steam;

@@ -41,7 +41,7 @@ body.animation {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-image: url('img/bg/ACH background2.png');
+    background-image: url('img/bg/main background test.png');
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -50,11 +50,11 @@ body.animation {
 /* Triangle */
 .triangle {
     position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background tria.png'); /* Triangle image */
+    top: 4vh; /* Adjusted position */
+    right: -22vw;
+    width: 40vw;
+    height: 40vh;
+    background-image: url('img/bg/st black a.png'); /* Triangle image */
     background-size: contain;
     background-repeat: no-repeat;
     animation: moveUpDownTriangle 6s ease-in-out infinite;
@@ -77,11 +77,11 @@ body.animation {
 
 .Circle {
     position: fixed; /* Changed from absolute to fixed */
-    bottom: -8vh; /* Adjusted position */
-    right: 0;
-    width: 80vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background cir.png'); /* Triangle image */
+    bottom: -2vh; /* Adjusted position */
+    right: -22vw;
+    width: 40vw;
+    height: 40vh;
+    background-image: url('img/bg/st black y.png'); /* Triangle image */
     background-size: contain;
     background-repeat: no-repeat;
     animation: moveUpDownTriangle 6s ease-in-out infinite;

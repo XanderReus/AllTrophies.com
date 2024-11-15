@@ -6,29 +6,29 @@ const SteamComponents = ({ steamid, setSteamId }) => {
     const [games, setGames] = useState([]);
     const [player, setPlayer] = useState(null);
     const [loading, setLoading] = useState(true);
-    const appid = '252490'; // Replace with the actual App ID
+    const appid = '620'; // Replace with the actual App ID
 
     useEffect(() => {
         // Optional: Set the steamId if needed in the parent component
         if (!steamid) {
-            setSteamId('76561198239999462'); // Set the steamId in the parent component
+            setSteamId(''); // Set the steamId in the parent component
         }
 
         const fetchData = async () => {
             try {
-                const achievementsResponse = await getPlayerAchievements(steamid || '76561198239999462', appid);
+                const achievementsResponse = await getPlayerAchievements(steamid || '', appid);
                 if (achievementsResponse && achievementsResponse.achievements) {
                     setAchievements(achievementsResponse.achievements);
                 } else {
                     console.log('No achievements found in response');
                 }
 
-                const gamesResponse = await getOwnedGames(steamid || '76561198239999462');
+                const gamesResponse = await getOwnedGames(steamid || '');
                 if (gamesResponse.data && gamesResponse.data.response && gamesResponse.data.response.games) {
                     setGames(gamesResponse.data.response.games);
                 }
 
-                const playerResponse = await getPlayerSummary(steamid || '76561198239999462');
+                const playerResponse = await getPlayerSummary(steamid || '');
                 if (playerResponse.data && playerResponse.data.response && playerResponse.data.response.players) {
                     setPlayer(playerResponse.data.response.players[0]);
                 }

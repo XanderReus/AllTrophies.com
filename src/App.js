@@ -11,13 +11,6 @@ import "./HTML/CSS/Index.css";
 function App() {
     return (
         <Router>
-            <div className="animation-container">
-                <div className="animation-background">
-                    <div className="Circle"></div>
-                    <div className="Square"></div>
-                    <div className="triangle"></div>
-                    <div className="x-shape"></div>
-                </div>
                 <div className="content">
                     <Routes>
                         <Route exact path="/" element={<MyApp />} />
@@ -26,7 +19,6 @@ function App() {
                         <Route path="/xbox" element={<Xbox />} />
                     </Routes>
                 </div>
-            </div>
         </Router>
     );
 }
