@@ -1,0 +1,76 @@
+
+.steam-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.player-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player-avatar {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.game-card {
+    cursor: pointer;
+    text-align: center;
+    width: 120px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    border-color: blue;
+}
+
+.selected {
+    border-color: blue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5);
+}
+
+.game-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.game-name {
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.achievement-item {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+.stTitleName{
+    text-align: center;
+}
