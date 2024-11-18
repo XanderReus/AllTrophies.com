@@ -24,7 +24,7 @@
 .game-card {
     cursor: pointer;
     text-align: center;
-    width: 120px;
+    width: 190px;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 10px;
@@ -42,14 +42,14 @@
 }
 
 .game-image {
-    width: 100px;
+    width: 170px;
     height: auto;
     margin-bottom: 5px;
     border-radius: 5px;
 }
 
 .game-name {
-    font-size: 12px;
+    font-size: 20px;
     word-wrap: break-word;
 }
 
@@ -65,12 +65,19 @@
 .achievement-item {
     margin-bottom: 20px;
     text-align: center;
-    width: 300px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border: 1px solid gray;
     border-radius: 5px;
     padding: 10px;
 }
 .stTitleName{
     text-align: center;
+}
+.achievement-item img {
+    width: 70px;
+    height: 70px;
+    max-width: 100%;  /* Scale to the width of the container */
+    max-height: 70px; /* Set a maximum height to limit the size */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
 }

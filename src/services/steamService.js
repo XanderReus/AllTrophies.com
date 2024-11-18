@@ -1,11 +1,8 @@
-// src/services/steamService.js
 import axios from 'axios';
 import { STEAM_API_KEY } from '../config';
-import './steamService.css'
+import './steamService.css';
+
 const STEAM_API_URL = '/api';
-
-// src/services/steamService.js
-
 
 export const getPlayerAchievements = async (steamid, appid) => {
     try {
@@ -52,7 +49,6 @@ export const getPlayerAchievements = async (steamid, appid) => {
         throw error;
     }
 };
-
 
 export const getOwnedGames = (steamid) => {
     return axios.get(`${STEAM_API_URL}/IPlayerService/GetOwnedGames/v1/`, {

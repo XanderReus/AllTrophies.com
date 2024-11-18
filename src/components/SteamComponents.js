@@ -198,6 +198,11 @@ const SteamComponents = ({ steamid, setSteamId }) => {
             <ul className="achievements-list">
                 {achievements.map((achievement) => (
                     <li key={achievement.apiname} className="achievement-item">
+                        {/* Use the achieved icon, or the icongray if not achieved */}
+                        <img
+                            src={achievement.achieved === 1 ? achievement.icon : achievement.icongray}
+                            alt={`${achievement.displayName} icon`}
+                        />
                         <div>
                             <strong>{achievement.displayName}</strong>
                             <p>{achievement.description}</p>
