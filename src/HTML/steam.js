@@ -30,7 +30,7 @@ const Steam = () => {
                     </Link>
                     <nav className="navbarst">
                         <ul className="nav-linksst">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Go to Top</a></li>
                             <li><a href="#">All ACH</a></li>
                             <li><a href="#">Types</a></li>
                             <li><a href="#">Contact</a></li>

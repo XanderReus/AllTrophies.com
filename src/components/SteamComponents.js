@@ -156,6 +156,16 @@ const SteamComponents = ({ steamid, setSteamId }) => {
         fetchAchievements();
     }, [steamid, selectedGame]);
 
+    // Scroll to the element with the class name "achievements-list"
+    const scrollToClass = () => {
+        const element = document.querySelector('.achievements-list');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            console.log('Element with class "achievements-list" not found.');
+        }
+    };
+
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -183,7 +193,10 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                     <div
                         key={game.appid}
                         className={`game-card ${selectedGame === game.appid ? 'selected' : ''}`}
-                        onClick={() => setSelectedGame(game.appid)}
+                        onClick={() => {
+                            setSelectedGame(game.appid);
+                            scrollToClass(); // Scroll to achievements on game card click
+                        }}
                     >
                         <img
                             className="game-image"
@@ -194,6 +207,7 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                     </div>
                 ))}
             </div>
+
             <div className="stTitleName"><h2>Achievements</h2></div>
             <ul className="achievements-list">
                 {achievements.map((achievement) => (
