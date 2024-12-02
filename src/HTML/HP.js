@@ -17,7 +17,7 @@ export default function MyApp() {
                     <img src={logo} className="logo" alt="Logo" style={{}}/>
                     <nav className="navbar">
                         <ul className="nav-links">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Go to Top</a></li>
                             <li><a href="#">All ACH</a></li>
                             <li><a href="#">Types</a></li>
                             <li><a href="#">Contact</a></li>
