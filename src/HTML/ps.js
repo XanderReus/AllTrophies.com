@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import {BrowserRouter as Router, Route, Routes, Navigate,} from 'react-router-dom';
-import logo from "./CSS/img/ACHlogo.png";
-import "./CSS/pspage.css"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PSNComponent from '../components/PSNComponent'; // Ensure the import path is correct
+import logo from './CSS/img/ACHlogo.png';
+import './CSS/pspage.css'; // Ensure the CSS file path is correct
 
-const ps = () => {
+const PSPage = () => {
     return (
         <div className="pspage">
             <div className="animation-containerps">
@@ -16,10 +16,12 @@ const ps = () => {
                 </div>
             </div>
             <div>
-                {/*Navbar*/}
+                {/* Navbar */}
                 <header className="headerst">
                     <Link to="/">
-                        <button><img src={logo} className="logo" alt="Logo" style={{}}/></button>
+                        <button>
+                            <img src={logo} className="logo" alt="Logo" />
+                        </button>
                     </Link>
                     <nav className="navbarst">
                         <ul className="nav-linksst">
@@ -31,19 +33,16 @@ const ps = () => {
                     </nav>
                 </header>
 
-                <searchS className="searchs">
-                    <input id="search-input-field" type="text" className="form-control" placeholder="Name"
-                           aria-label="Name" aria-describedby="button-addon2"/>
-                    <button className="btn btn-secondary custom-btn" type="submit" id="button-addon2">Search</button>
-                </searchS>
+                {/* PSN Search Component */}
+                <PSNComponent />
 
-                {/*footer*/}
+                {/* Footer */}
                 <footer className="footer">
                     <p>&copy; 2024 ACH Database. All rights reserved. CaveMen inc.</p>
                 </footer>
-
             </div>
         </div>
     );
-}
-export default ps;
+};
+
+export default PSPage;

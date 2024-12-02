@@ -1,212 +1,104 @@
 body::-webkit-scrollbar {
     display: none;
 }
-.searchs {
+
+
+.psn-container {
+    font-family: 'AquireLight', sans-serif;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.psn-header {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.psn-search-container {
     display: flex;
-    width: 20%;
-    height: 10%;
-    margin-left: 40%;
-    margin-top: 5%;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-/* Animation styles */
-.pspage body.animation {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('img/bg/ACH background2.png'); /* ACH background image */
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    overflow: visible; /* Allow overflow to show circle and square */
-    z-index: -2; /* Background stays behind */
+.psn-search-input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-.animation-containerps {
-    position: relative;
-    width: 100vw;
+.psn-search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.animation-backgroundps {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background2.png');
-    background-size: cover;
-    background-position: center;
-    z-index: -2;
+.psn-search-button:hover {
+    background-color: #0056b3;
 }
 
-/* Triangle */
-.pstri {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
-    right: -32vw;
-    width: 50vw;
-    height: 50vh;
-    background-image: url('img/bg/ACH background tria fix.png'); /* Triangle image */
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: moveUpDownTriangle 6s ease-in-out infinite;
-    z-index: -1;
+.psn-error-message {
+    color: red;
+    font-size: 1rem;
 }
 
-/* X Shape */
-.psx {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background x.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: moveUpDownX 8s ease-in-out infinite;
-    z-index: -1;
+.psn-profile-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.pscir {
-    position: fixed; /* Changed from absolute to fixed */
-    bottom: -8vh; /* Adjusted position */
-    right: -33vw;
-    width: 50vw;
-    height: 50vh;
-    background-image: url('img/bg/ACH background cir fix.png'); /* Triangle image */
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: moveUpDownTriangle 6s ease-in-out infinite;
-    z-index: -1;
+.psn-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
-.pssqu {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 0; /* Adjusted position */
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('img/bg/ACH background squar.png'); /* Triangle image */
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: moveUpDownX 6s ease-in-out infinite;
-    z-index: -1;
+.psn-profile-username {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Keyframes for smooth up and down movement */
-@keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-30px);
-    }
+.psn-achievements-container {
+    margin-top: 20px;
 }
 
-@keyframes moveUpDownTriangle {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-30px); /* Slightly more movement for the triangle */
-    }
+.psn-achievement {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
 }
 
-@keyframes moveUpDownX {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-30px); /* Slightly more movement for the X-shape */
-    }
-}
-
-
-/* Header */
-.headerst {
-    background-color: #333;
-    padding: 20px 0;
-    height: 70px;
-    color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
-/* Navbar */
-.navbarst {
-    font-family: 'AquireLight';
+.psn-achievement-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    max-height: 100px;
-    margin-left: 74%;
-    padding: 0 20px;
-    height: 25px;
-    z-index: 1;
 }
 
-/* Navigation Links */
-.nav-linksst {
-    list-style: none;
-    position: fixed;
-    right: 0;
-    top: 22px;
-    z-index: 1;
+.psn-game-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
 }
 
-.nav-linksst li {
-    margin: 0 15px;
-    z-index: 1;
-}
-
-.nav-linksst a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1;
-}
-
-/* Footer */
-.footer {
-    font-family: "AquireLight";
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 55px;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    z-index: 1; /* Ensure footer is above background */
-}
-
-.logo {
-    max-width: 55px;
-    max-height: 55px;
-    position: absolute;
-    top: 8px;
-    left: 45px;
-    font-size: 18px;
-    z-index: 1;
-}
-
-@font-face {
-    font-family: 'AquireLight';
-    src: url('../fonts/AquireLight-YzE0o.otf');
-}
-
-* {
-    margin: 0;
+.psn-trophy-details ul {
+    list-style-type: none;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
+.psn-trophy-details li {
+    margin: 5px 0;
 }
