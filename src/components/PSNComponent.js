@@ -46,7 +46,7 @@ const PSNComponent = () => {
 
     return (
         <div className="psn-container">
-            <h1 className="psn-header">PSN Achievements</h1>
+            <h1 className="psn-header"></h1>
             <div className="psn-search-container">
                 <input
                     type="text"
