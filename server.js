@@ -41,18 +41,19 @@ app.get("/psn-data", async (req, res) => {
             gameName: title.trophyTitleName,
             platform: title.trophyTitlePlatform,
             trophyCounts: {
-                bronze: title.definedTrophies.bronze,
-                silver: title.definedTrophies.silver,
-                gold: title.definedTrophies.gold,
                 platinum: title.definedTrophies.platinum,
+                gold: title.definedTrophies.gold,
+                silver: title.definedTrophies.silver,
+                bronze: title.definedTrophies.bronze,
             },
             earnedCounts: {
-                bronze: title.earnedTrophies.bronze,
-                silver: title.earnedTrophies.silver,
-                gold: title.earnedTrophies.gold,
                 platinum: title.earnedTrophies.platinum,
+                gold: title.earnedTrophies.gold,
+                silver: title.earnedTrophies.silver,
+                bronze: title.earnedTrophies.bronze,
             },
             gameURL: title.trophyTitleIconUrl,
+            progress: title.progress,
         }));
 
         // Send structured response to frontend

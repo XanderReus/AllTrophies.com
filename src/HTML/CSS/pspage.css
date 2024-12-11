@@ -1,22 +1,202 @@
+/* Body and General Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-image: url('img/bg/ACH background2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Remove scrollbar */
 body::-webkit-scrollbar {
     display: none;
 }
 
+/* Main page container */
+.pspage {
+    position: relative;
+    min-height: 100vh; /* Ensure it takes full height */
+    padding-bottom: 55px; /* Prevent content from hiding behind footer */
+    overflow: hidden; /* Hide horizontal scrolling */
+}
 
-.psn-container {
-    font-family: 'AquireLight', sans-serif;
-    margin: 0 auto;
-    width: 90%;
+/* Animation container */
+.animation-containerps {
+    position: absolute;
+    width: 100vw;
+    height: 100vh; /* Full screen */
+    top: 0;
+    left: 0;
+    z-index: -2; /* Behind content */
+    pointer-events: none; /* Make sure background shapes don't block content */
+}
+
+/* Background shapes */
+.animation-backgroundps {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure behind shapes */
+}
+
+/* Circle */
+.pscir {
+    position: fixed;
+    bottom: -5vh;
+    right: -26vw;
+    width: 40vw;
+    height: 40vh;
+    background-image: url('img/bg/ACH background cir fix.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDownCircle 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Square */
+.pssqu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/bg/ACH background squar.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDownSquare 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Triangle */
+.pstri {
+    position: fixed;
+    top: 4vh;
+    right: -24vw;
+    width: 40vw;
+    height: 40vh;
+    background-image: url('img/bg/ACH background tria fix.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDownTriangle 6s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* X-shape */
+.psx {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/bg/ACH background x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: moveUpDownX 8s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Keyframes for smooth up and down movement */
+@keyframes moveUpDownCircle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes moveUpDownSquare {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes moveUpDownTriangle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes moveUpDownX {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Header */
+.headerst {
+    background-color: #333;
+    padding: 20px 0;
+    height: 70px;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbarst {
+    font-family: 'AquireLight';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
+    max-height: 100px;
+    margin-left: 74%;
+    padding: 0 20px;
+    height: 25px;
+    z-index: 1;
+}
+
+/* Navigation Links */
+.nav-linksst {
+    list-style: none;
+    position: fixed;
+    right: 0;
+    top: 22px;
+    z-index: 1;
+}
+
+.nav-linksst li {
+    margin: 0 15px;
+    z-index: 1;
+}
+
+.nav-linksst a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 55px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    padding: 20px 0;
+    z-index: 1;
 }
 
-.psn-header {
-    margin-top: 20px;
-    font-size: 2rem;
-    color: #333;
-}
-
+/* PSN Search Styling */
 .psn-search-container {
     display: flex;
     justify-content: center;
@@ -25,7 +205,6 @@ body::-webkit-scrollbar {
 }
 
 .psn-search-input {
-    width: 60%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -45,60 +224,19 @@ body::-webkit-scrollbar {
 .psn-search-button:hover {
     background-color: #0056b3;
 }
-
-.psn-error-message {
-    color: red;
-    font-size: 1rem;
+body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
 }
-
-.psn-profile-container {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.psn-profile-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.psn-profile-username {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.psn-achievements-container {
-    margin-top: 20px;
-}
-
-.psn-achievement {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.psn-achievement-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.psn-game-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
-}
-
-.psn-trophy-details ul {
+ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
-.psn-trophy-details li {
-    margin: 5px 0;
+li {
+    display: inline;
+    margin-right: 15px; /* Adjust spacing between items */
 }

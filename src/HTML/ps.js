@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PSNComponent from '../components/PSNComponent'; // Ensure the import path is correct
-import logo from './CSS/img/ACHlogo.png';
-import './CSS/pspage.css'; // Ensure the CSS file path is correct
+import logo from './CSS/img/ACHlogo.png'; // Ensure the path is correct
+import './CSS/pspage.css'; // Ensure the CSS path is correct
 
 const PSPage = () => {
     return (
         <div className="pspage">
+            {/* Background Animation */}
             <div className="animation-containerps">
                 <div className="animation-backgroundps">
-                    <div className="pstri"></div>
-                    <div className="psx"></div>
                     <div className="pscir"></div>
                     <div className="pssqu"></div>
+                    <div className="pstri"></div>
+                    <div className="psx"></div>
                 </div>
             </div>
-            <div>
+
+            {/* Main Content */}
+            <div className="content">
                 {/* Navbar */}
                 <header className="headerst">
                     <Link to="/">
