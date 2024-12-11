@@ -1,7 +1,11 @@
 
-.steam-container {
+.games-container-st {
     font-family: Arial, sans-serif;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
 }
 
 .player-info {

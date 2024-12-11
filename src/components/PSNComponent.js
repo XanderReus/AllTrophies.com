@@ -90,7 +90,7 @@ const PSNComponent = () => {
                                         <div className="psn-achievement-info">
                                             <h3>{title.gameName || "Unknown Game"}</h3>
                                             <p>
-                                                {trophyCount} trophies earned
+                                                {trophyCount} trophies earned  &nbsp;
                                                 {hasPlatinum(title.earnedCounts) && (
                                                     <img
                                                         src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb9cfb5b-aa09-4dc2-b19b-931576776dae/de4fujh-3cf64804-b0b2-4d1a-8f60-928f1ddeb575.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ZiOWNmYjViLWFhMDktNGRjMi1iMTliLTkzMTU3Njc3NmRhZVwvZGU0ZnVqaC0zY2Y2NDgwNC1iMGIyLTRkMWEtOGY2MC05MjhmMWRkZWI1NzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5T7yYnOROSIYA5UVeNWHfc-lfC5EcBmAbgtnGzXv5Pc"
@@ -132,7 +132,7 @@ const PSNComponent = () => {
                                                 <li>Bronze: {title.earnedCounts.bronze}</li>
                                             </ul>
                                         </strong>
-                                    <strong>Percentage of trophies: {title.progress}%</strong></div>
+                                        <strong>Percentage of trophies: {title.progress}%</strong></div>
                                 </div>
                             );
                         })}

@@ -22,7 +22,7 @@ const Steam = () => {
             </div>
             <div>
                 {/* Navbar */}
-                <header className="headerst">
+                <header className="headerst-steam">
                     <Link to="/">
                         <button>
                             <img src={logo} className="logo" alt="Logo" />

@@ -188,7 +188,7 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                 </div>
             )}
             <div className="stTitleName"><h2>Owned Games</h2></div>
-            <div className="games-container">
+            <div className="games-container-st">
                 {games.map((game) => (
                     <div
                         key={game.appid}
