@@ -25,7 +25,7 @@ const Steam = () => {
                 <header className="headerst-steam">
                     <Link to="/">
                         <button>
-                            <img src={logo} className="logo" alt="Logo" />
+                            <img src={logo} className="logo" alt="Logo"/>
                         </button>
                     </Link>
                     <nav className="navbarst">
@@ -55,9 +55,15 @@ const Steam = () => {
                     </button>
                 </form>
 
+                <div className="steamid-button-container text-center mt-3">
+                    <a href="https://steamid.io/" target="_blank" rel="noopener noreferrer">
+                        <button className="btn btn-primary">Get Steam-64 code</button>
+                    </a>
+                </div>
+
                 {/* Render SteamComponents with updated steamId */}
                 <testS className="testS">
-                    <SteamComponents steamid={steamId} setSteamId={setSteamId} />
+                    <SteamComponents steamid={steamId} setSteamId={setSteamId}/>
                 </testS>
 
                 {/* Footer */}
