@@ -138,11 +138,11 @@ body::-webkit-scrollbar {
 
 /* Header */
 .headerst {
-    position: sticky;
     background-color: #333;
     padding: 20px 0;
     height: 70px;
     color: #fff;
+    position: sticky;
     top: 0;
     z-index: 1;
 }
@@ -207,9 +207,12 @@ body::-webkit-scrollbar {
 /* PSN Search Styling */
 .psn-search-container {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    padding: 20px;
+    top: 3vh;
 }
 
 .psn-search-input {
@@ -247,4 +250,14 @@ ul {
 li {
     display: inline;
     margin-right: 15px; /* Adjust spacing between items */
+}
+.headerst-ps {
+    background-color: #100e0e;
+    padding: 20px 0;
+    height: 70px;
+    width: 100%;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
