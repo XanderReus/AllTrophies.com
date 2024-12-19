@@ -43,19 +43,19 @@ const Steam = () => {
                     <input
                         id="search-input-field"
                         type="text"
-                        className="form-control"
+                        className="searchsinput"
                         placeholder="Enter Steam User 64"
                         aria-label="Steam User 64"
                         aria-describedby="button-addon2"
                         value={searchInput} // Bind to searchInput state
                         onChange={(e) => setSearchInput(e.target.value)} // Update searchInput state on change
                     />
-                    <button className="btn btn-secondary custom-btn" type="submit" id="button-addon2">
+                    <button className="btn btn-secondary custom-btn btn-lg" type="submit" id="button-addon2">
                         Search
                     </button>
                 </form>
 
-                <div className="steamid-button-container text-center mt-3">
+                <div className="steamid-button-container text-center mt-3 btn-lg">
                     <a href="https://steamid.io/" target="_blank" rel="noopener noreferrer">
                         <button className="btn btn-primary">Get Steam-64 code</button>
                     </a>

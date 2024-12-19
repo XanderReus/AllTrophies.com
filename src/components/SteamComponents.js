@@ -136,7 +136,7 @@ const SteamComponents = ({ steamid, setSteamId }) => {
         <div className="steam-container">
             {player && (
                 <div className="player-info">
-                    <h1>{player.personaname}</h1>
+                    <h2>{player.personaname}</h2>
                     <img className="player-avatar" src={player.avatarfull} alt={player.personaname} />
                 </div>
             )}
@@ -145,11 +145,11 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                 <>
                     <div className="d-flex justify-content-center align-items-center my-4">
                         <div>
-                            <label htmlFor="sortSelect" className="form-label text-center mb-2">Sort Games by:</label>
+                            <label htmlFor="sortSelect" className="form-label text-center mb-2 h5">Sort Games by:</label>
                             <select
                                 id="sortSelect"
                                 className="form-select text-center"
-                                style={{ width: '250px' }}
+                                style={{ width: '250px', fontSize: '18px' }}
                                 onChange={(e) => setSortOption(e.target.value)}
                                 value={sortOption}
                             >
@@ -189,11 +189,11 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                 <>
                     <div className="d-flex justify-content-center align-items-center my-4">
                         <div>
-                            <label htmlFor="achievementSortSelect" className="form-label text-center mb-2">Sort Achievements by:</label>
+                            <label htmlFor="achievementSortSelect" className="form-label text-center mb-2 h5">Sort Achievements by:</label>
                             <select
                                 id="achievementSortSelect"
                                 className="form-select text-center"
-                                style={{ width: '250px' }}
+                                style={{ fontSize: '18px',}}
                                 onChange={(e) => setAchievementSortOption(e.target.value)}
                                 value={achievementSortOption}
                             >
