@@ -259,7 +259,6 @@ body::-webkit-scrollbar {
 
 /* PSN Search Styling */
 .psn-search-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 0;
@@ -269,7 +268,6 @@ body::-webkit-scrollbar {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px;
 }
 
 .psn-search-button {
@@ -366,4 +364,7 @@ li {
 .trophy-platinum {
     color: #e5e4e2; /* Platinum color */
     font-weight: bold; /* Optional: Make platinum stand out */
+}
+.gameTitle {
+    font-family: 'AquireLight';
 }

@@ -199,7 +199,7 @@ const PSNComponent = () => {
                         <div className="modal-overlay">
                             <div className="modal-content">
                                 <button className="close-button" onClick={() => setSelectedGame(null)}>✖</button>
-                                <h2>{selectedGame.gameName} - Trophies</h2>
+                                <h2 className={"gameTitle"}>{selectedGame.gameName} - Trophies</h2>
                                 <img className="game-image" src={selectedGame.gameURL} alt={selectedGame.gameName}/>
                                 <ul className="trophy-list">
                                     {selectedGame.earnedTrophies.map((trophy, i) => (
