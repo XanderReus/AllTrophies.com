@@ -1,7 +1,7 @@
 
 .games-container-st {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    padding: 0 100px; /* Top and Bottom: 0, Left and Right: 100px */
     display: flex;
     flex-wrap: wrap;
     gap: 1vw;
@@ -77,7 +77,7 @@
 
 .achievements-list {
     list-style: none;
-    padding: 0;
+    padding: 0 100px; /* Top and Bottom: 0, Left and Right: 100px */
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -92,6 +92,7 @@
     border: 1px solid gray;
     border-radius: 5px;
     padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .stTitleName{
     text-align: center;
@@ -102,4 +103,8 @@
     max-width: 100%;  /* Scale to the width of the container */
     max-height: 70px; /* Set a maximum height to limit the size */
     object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+.searchs{
+
 }

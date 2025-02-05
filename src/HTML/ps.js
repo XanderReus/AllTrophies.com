@@ -17,13 +17,12 @@ const PSPage = () => {
                 </div>
             </div>
 
-            {/* Main Content */}
-            <div className="content">
+            <div>
                 {/* Navbar */}
-                <header className="headerst">
+                <header className="headerst-ps">
                     <Link to="/">
                         <button>
-                            <img src={logo} className="logo" alt="Logo" />
+                            <img src={logo} className="logo" alt="Logo"/>
                         </button>
                     </Link>
                     <nav className="navbarst">
@@ -35,7 +34,10 @@ const PSPage = () => {
                         </ul>
                     </nav>
                 </header>
+            </div>
 
+            {/* Main Content */}
+            <div className="content">
                 {/* PSN Search Component */}
                 <PSNComponent />
 

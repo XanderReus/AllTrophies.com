@@ -73,7 +73,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     align-items: stretch; /* Stretch children to match the height of the tallest one */
-
+    padding: 50px;
 }
 
 /* Achievement Styles */
