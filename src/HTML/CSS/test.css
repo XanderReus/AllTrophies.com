@@ -105,10 +105,10 @@ body {
 }
 
 .psn-game-image {
-    width: 250px;            /* Set a fixed width for all images */
-    height: 150px;           /* Set a fixed height for all images */
-    object-fit: contain;     /* Ensure the entire image is shown without cropping */
-    border-radius: 5px;      /* Keeps rounded corners for a polished look */
+    width: 250px; /* Set a fixed width for all images */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: contain; /* Ensure the entire image is shown without cropping */
+    border-radius: 5px; /* Keeps rounded corners for a polished look */
     margin-left: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     /* Adds space between the title and the image */
@@ -119,6 +119,7 @@ body {
     font-family: AquireLight;
     text-align: center;
     font-size: 24px;
+    text-align: center;
 }
 
 .psn-achievement-info p {
@@ -154,7 +155,8 @@ body {
     width: 50px;
     height: 50px;
 }
-.games-container{
+
+.games-container {
     justify-content: center;
     padding: 50px;
     border: 1px solid #76d7ff;
@@ -163,5 +165,14 @@ body {
     width: 100vh;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.25); /* White background with 5% opacity */
-
 }
+
+.psn-trophy-details,
+.toggleAchievementsDetail {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+

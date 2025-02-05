@@ -1,3 +1,64 @@
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffffff;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Trophy List */
+.trophy-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.trophy-item {
+    width: 250px;
+    background: #000000;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.trophy-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
 /* Body and General Layout */
 body {
     margin: 0;
@@ -239,4 +300,70 @@ ul {
 li {
     display: inline;
     margin-right: 15px; /* Adjust spacing between items */
+}
+.toggle-achievements-button {
+    margin: 10px 0;
+    padding: 8px 12px;
+    color: white;
+    background-color: rgba(42, 97, 163, 0.5); /* White background with 5% opacity */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-achievements-button:hover {
+}
+
+.toggleAchievementsDetail {
+    display: none;
+    margin-top: 10px;
+}
+
+.toggleAchievementsDetail.show {
+    display: block;
+}
+.trophyImage{
+    width: 150px;
+    height: auto;
+}
+.trophyDetailsList{
+    font-size: large;
+}
+.expanded-trophy-details {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+    width: 90%;
+    max-width: 800px;
+}
+
+.trophy-details-list {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.trophy-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+.trophy-bronze {
+    color: #cd7f32; /* Bronze color */
+}
+
+.trophy-silver {
+    color: #c0c0c0; /* Silver color */
+}
+
+.trophy-gold {
+    color: #ffd700; /* Gold color */
+}
+
+.trophy-platinum {
+    color: #e5e4e2; /* Platinum color */
+    font-weight: bold; /* Optional: Make platinum stand out */
 }
