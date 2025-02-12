@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { getPlayerAchievements, getOwnedGames, getPlayerSummary } from '../services/steamService';
+import React, {useState, useEffect} from 'react';
+import {getPlayerAchievements, getOwnedGames, getPlayerSummary} from '../services/steamService';
 import '../HTML/CSS/SteamComp.css';
 
-const SteamComponents = ({ steamid, setSteamId }) => {
+const SteamComponents = ({steamid, setSteamId}) => {
     const [achievements, setAchievements] = useState([]);
     const [games, setGames] = useState([]);
     const [player, setPlayer] = useState(null);
@@ -37,12 +37,12 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                                             ? parseFloat(((unlockedAchievements / totalAchievements) * 100).toFixed(2))
                                             : 0;
 
-                                    return { ...game, achievementPercentage };
+                                    return {...game, achievementPercentage};
                                 }
-                                return { ...game, achievementPercentage: 0 }; // Default 0% if no achievements found
+                                return {...game, achievementPercentage: 0}; // Default 0% if no achievements found
                             } catch (error) {
                                 console.error(`Error fetching achievements for game ${game.name}:`, error);
-                                return { ...game, achievementPercentage: 0 }; // Default 0% on error
+                                return {...game, achievementPercentage: 0}; // Default 0% on error
                             }
                         })
                     );
@@ -117,7 +117,7 @@ const SteamComponents = ({ steamid, setSteamId }) => {
     const scrollToClass = () => {
         const element = document.querySelector('.achievements-list');
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            element.scrollIntoView({behavior: 'smooth', block: 'start'});
         } else {
             console.log('Element with class "achievements-list" not found.');
         }
@@ -137,7 +137,7 @@ const SteamComponents = ({ steamid, setSteamId }) => {
             {player && (
                 <div className="player-info">
                     <h2>{player.personaname}</h2>
-                    <img className="player-avatar" src={player.avatarfull} alt={player.personaname} />
+                    <img className="player-avatar" src={player.avatarfull} alt={player.personaname}/>
                 </div>
             )}
 
@@ -145,11 +145,12 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                 <>
                     <div className="d-flex justify-content-center align-items-center my-4">
                         <div>
-                            <label htmlFor="sortSelect" className="form-label text-center mb-2 h5">Sort Games by:</label>
+                            <label htmlFor="sortSelect" className="form-label text-center mb-2 h5">Sort Games
+                                by:</label>
                             <select
                                 id="sortSelect"
                                 className="form-select text-center"
-                                style={{ width: '250px', fontSize: '18px' }}
+                                style={{width: '250px', fontSize: '18px'}}
                                 onChange={(e) => setSortOption(e.target.value)}
                                 value={sortOption}
                             >
@@ -189,11 +190,12 @@ const SteamComponents = ({ steamid, setSteamId }) => {
                 <>
                     <div className="d-flex justify-content-center align-items-center my-4">
                         <div>
-                            <label htmlFor="achievementSortSelect" className="form-label text-center mb-2 h5">Sort Achievements by:</label>
+                            <label htmlFor="achievementSortSelect" className="form-label text-center mb-2 h5">Sort
+                                Achievements by:</label>
                             <select
                                 id="achievementSortSelect"
                                 className="form-select text-center"
-                                style={{ fontSize: '18px',}}
+                                style={{fontSize: '18px',}}
                                 onChange={(e) => setAchievementSortOption(e.target.value)}
                                 value={achievementSortOption}
                             >

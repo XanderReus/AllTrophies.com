@@ -30,7 +30,7 @@ function logError(error, routeName) {
 app.get("/psn-data", async (req, res) => {
     const username = req.query.username; // Retrieve the username from the query parameter
     if (!username) {
-        return res.status(400).json({ error: "Username is required" });
+        return res.status(400).json({error: "Username is required"});
     }
 
     try {
@@ -86,13 +86,13 @@ app.get("/psn-data", async (req, res) => {
     }
 });
 
-const { getTitleTrophies } = require("psn-api");
+const {getTitleTrophies} = require("psn-api");
 
 // Fetches the selected games individual trophies
 app.get("/psn-trophies", async (req, res) => {
-    const { username, npCommunicationId } = req.query;
+    const {username, npCommunicationId} = req.query;
     if (!username || !npCommunicationId) {
-        return res.status(400).json({ error: "Username and game ID are required" });
+        return res.status(400).json({error: "Username and game ID are required"});
     }
 
     try {
@@ -111,7 +111,7 @@ app.get("/psn-trophies", async (req, res) => {
         const isPS4OrPSVitaGame = npCommunicationId.startsWith("NPWR") && parseInt(npCommunicationId.slice(4)) >= 10000 && parseInt(npCommunicationId.slice(4)) < 20000;
         const isPS5Game = !npCommunicationId.startsWith("NPWR") && npCommunicationId.includes("_00");
 
-        const options = isPS3Game || isPS4OrPSVitaGame ? { npServiceName: "trophy" } : {};
+        const options = isPS3Game || isPS4OrPSVitaGame ? {npServiceName: "trophy"} : {};
 
         // Fetch earned trophies
         const earnedTrophiesResponse = await getUserTrophiesEarnedForTitle(
@@ -144,11 +144,10 @@ app.get("/psn-trophies", async (req, res) => {
                 name: detailedTrophy?.trophyName || "Unknown Trophy",
                 description: detailedTrophy?.trophyDetail || "No description available",
                 imageUrl: detailedTrophy?.trophyIconUrl || "",
-
             };
         });
 
-        res.json({ trophies: trophiesWithDetails });
+        res.json({trophies: trophiesWithDetails});
     } catch (error) {
         logError(error, "/psn-trophies");
         res.status(500).json({

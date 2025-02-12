@@ -209,7 +209,7 @@ const PSNComponent = () => {
                                                 <strong>{trophy.name}</strong> ({trophy.trophyType})
                                             </p>
                                             <p>
-                                            {trophy.earned ? (
+                                                {trophy.earned ? (
                                                     <>
                                                         Earned on: {new Date(trophy.earnedDateTime).toLocaleString()}
                                                         <br/>

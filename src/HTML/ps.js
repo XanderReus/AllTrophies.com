@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import PSNComponent from '../components/PSNComponent'; // Ensure the import path is correct
 import logo from './CSS/img/ACHlogo.png'; // Ensure the path is correct
 import './CSS/pspage.css'; // Ensure the CSS path is correct
@@ -39,7 +39,7 @@ const PSPage = () => {
             {/* Main Content */}
             <div className="content">
                 {/* PSN Search Component */}
-                <PSNComponent />
+                <PSNComponent/>
 
                 {/* Footer */}
                 <footer className="footer">
