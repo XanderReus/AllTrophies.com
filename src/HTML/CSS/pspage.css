@@ -311,6 +311,7 @@ li {
 }
 
 .toggle-achievements-button:hover {
+    background-color: rgba(12, 39, 71, 0.5); /* White background with 5% opacity */
 }
 
 .toggleAchievementsDetail {
@@ -364,7 +365,7 @@ li {
 
 .trophy-platinum {
     color: #e5e4e2; /* Platinum color */
-    font-weight: bold; /* Optional: Make platinum stand out */
+    font-weight: bold; /* Make platinum stand out */
 }
 .gameTitle {
     font-family: 'AquireLight';

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "../HTML/CSS/test.css"; // Ensure this path is correct.
-
+import placeholder from "../HTML/CSS/img/placeholder.png";
+import platinum from "../HTML/CSS/img/522ffa.png";
 /**
  * PSNComponent - React component to fetch and display PlayStation Network (PSN) user achievements.
  */
@@ -151,7 +152,7 @@ const PSNComponent = () => {
                                                 {trophyCount} trophies earned &nbsp;
                                                 {hasPlatinum(title.earnedCounts) && (
                                                     <img
-                                                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/fb9cfb5b-aa09-4dc2-b19b-931576776dae/de4fujh-3cf64804-b0b2-4d1a-8f60-928f1ddeb575.png"
+                                                        src={ platinum || placeholder}
                                                         alt="Platinum"
                                                         className="psn-platinum-icon"
                                                     />
@@ -159,7 +160,7 @@ const PSNComponent = () => {
                                             </p>
                                         </div>
                                         <img
-                                            src={title.gameURL || "placeholder.png"}
+                                            src={title.gameURL || placeholder}
                                             alt="Game Image"
                                             className="psn-game-image"
                                         />
@@ -206,7 +207,7 @@ const PSNComponent = () => {
                                         <li key={i} className="trophy-item">
                                             <img src={trophy.imageUrl} alt={trophy.name} className="trophy-icon"/>
                                             <p className={`trophy-${trophy.trophyType.toLowerCase()}`}>
-                                                <strong>{trophy.name}</strong> ({trophy.trophyType})
+                                                <strong> {trophy.name} </strong> ({trophy.trophyType})
                                             </p>
                                             <p>
                                                 {trophy.earned ? (
@@ -215,13 +216,11 @@ const PSNComponent = () => {
                                                         <br/>
                                                         {trophy.description}
                                                     </>
-                                                ) : (
-                                                    "Not earned yet"
-                                                )}
+                                                ) : ("Not earned yet")}
                                             </p>
 
-                                            <p>Earned Rate: {trophy.trophyEarnedRate}%</p>
-                                            <p>Trophy Rarity: {trophy.trophyRare}%</p>
+                                            <p> Earned Rate: {trophy.trophyEarnedRate}% </p>
+                                            <p> Trophy Rarity: {trophy.trophyRare}% </p>
                                         </li>
                                     ))}
                                 </ul>
